@@ -1,0 +1,177 @@
+:root {
+  --text-base: #afb6c2;
+  --text-title: #d4ccb6;
+  --background: #191816;
+  --form-background: #24221f;
+  --primary-color: #ffc632;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  position: relative;
+}
+
+.imagem,
+body,
+.container,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+}
+
+a {
+  text-decoration: none;
+  font-family: "Poppins";
+  color: var(--primary-color);
+}
+
+.login {
+  grid-column: 1;
+}
+
+body {
+  overflow: hidden;
+}
+
+.text-base {
+  font-family: "Poppins";
+  font-weight: 500;
+  color: var(--text-base);
+}
+
+.titulo {
+  display: flex;
+  font-family: "Poppins";
+  margin: 0;
+  color: var(--text-title);
+  align-items: center;
+}
+
+.titulo::before {
+  content: "";
+  display: inline-block;
+  background-image: url("./img/log-in.svg");
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.logo {
+  margin-top: -5rem;
+  margin-left: 2rem;
+  position: absolute;
+}
+
+.formulario {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 3rem 5rem;
+  background-color: var(--form-background);
+  margin: 5rem 5rem;
+  border-radius: 5px;
+}
+
+#email,
+#senha,
+button {
+  display: block;
+  margin: 10px 0;
+}
+
+#email,
+#senha {
+  width: 100%;
+  padding: 0.8rem 0;
+  border-radius: 5px;
+  background: var(--form-background);
+  border: 1px solid var(--text-base);
+  color: white;
+}
+
+#senha:hover,
+#email:hover {
+  border: 2px solid var(--primary-color);
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem 0;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--form-background);
+  margin: 20px 0;
+}
+
+.texto {
+  font-size: 15px;
+  margin-bottom: 2rem;
+  margin-top: 5px;
+}
+
+#email:placeholder-shown,
+#senha:placeholder-shown {
+  padding-left: 5px;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+.ajuda {
+  font-size: 14px;
+}
+
+.senha-ajuda {
+  justify-content: space-between;
+  display: flex;
+}
+
+.registrar {
+  display: block;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .formulario {
+    align-items: center;
+    margin: 3rem 3rem;
+  }
+
+  .logo {
+    position: relative;
+    margin-top: 5rem;
+    margin-left: 3rem;
+  }
+
+  .imagem {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .formulario {
+    margin: 4rem 0;
+    padding: 1rem;
+  }
+  html,
+  body,
+  .container {
+    background-color: var(--form-background);
+  }
+
+  .logo {
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 1rem;
+  }
+}
